@@ -4,72 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Community</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6600;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .navbar-nav-left {
+            flex-direction: row;
+            margin-right: auto;
+        }
+        .navbar-nav-right {
+            flex-direction: row;
+            margin-left: auto;
+        }
+        .nav-link {
+            padding-right: 0.5rem !important;
+            padding-left: 0.5rem !important;
+        }
+        .navbar-nav .btn {
+            margin-left: 0.5rem;
+        }
+        #brightness-toggle {
+            margin-right: 0.5rem;
+        }
+        .btn-orange {
+            background-color: #ff6600;
+            border-color: #ff6600;
+            color: white;
+        }
+        .btn-orange:hover {
+            background-color: #e65c00;
+            border-color: #e65c00;
+        }
+        @media (max-width: 991.98px) {
+            .navbar-brand {
+                position: static;
+                transform: none;
+            }
+            .navbar-nav-left,
+            .navbar-nav-right {
+                margin: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="community-name">
-               <h1>Codding Community</h1>
+    <header class="bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">Coding Community</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav navbar-nav-left">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">DSA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Web Development</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">ML & Data Science</a></li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item"><a class="nav-link" href="#">Interviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark" id="brightness-toggle">Brightness</button>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="btn btn-orange">Sign In</a>
+                    </li>
+                </ul>
             </div>
-            <nav>
-                <button class="nav-button" id="nav-left">&lt;</button>
-                <div class="nav-wrapper">
-                    <ul id="nav-list">
-                        <li><a href="#">DSA</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Programming Language</a></li>
-                        <li><a href="#">Data Science</a></li>
-                        <li><a href="#">Interview</a></li>
-                        <li><a href="#">Project</a></li>
-                        <li><a href="#">Job</a></li>
-                        <li><a href="#">Discussion</a></li>
-                        <li><a href="#">DevOps</a></li>
-                        <li><a href="#">Aptitude</a></li>
-                        <li><a href="#">Python</a></li>
-                        <li><a href="#">Java</a></li>
-                        <li><a href="#">Node</a></li>
-                        <li><a href="#">React</a></li>
-                        <li><a href="#">JavaScript</a></li>
-                        <li><a href="#">Core Subject</a></li>
-                    </ul>
-                </div>
-                <button class="nav-button" id="nav-right">&gt;</button>
-            </nav>
-        </div>
+        </nav>
     </header>
-    <main>
-        <div class="hero">
-            <div class="container">
-                <h1>Welcome to the Coding Community</h1>
-                <p>Enhance your coding skills with our comprehensive courses, tutorials, and discussions.</p>
-                <div class="search-bar">
-                    <input type="text" placeholder="What do you want to learn today?">
-                    <button>Search</button>
+    <main class="container mt-5">
+        <div class="text-center">
+            <h1>Welcome to Coding Community</h1>
+            <p>Join our vibrant online community where you learn, share and grow together</p>
+            <div class="input-group mb-3 w-50 mx-auto">
+                <input type="text" class="form-control" placeholder="Learn python, HTML, CSS">
+                <div class="input-group-append">
+                    <button class="btn btn-orange" type="button">Search</button>
                 </div>
             </div>
         </div>
-        <section class="featured-courses">
-            <div class="container">
-                <h2>Featured Courses</h2>
-                <div class="courses-grid">
-                    <div class="course-card">
-                        <h3>Data Structures and Algorithms</h3>
-                        <p>Master the fundamentals of DSA with our in-depth tutorials and practice problems.</p>
-                    </div>
-                    <div class="course-card">
-                        <h3>Web Development</h3>
-                        <p>Learn to build modern web applications using HTML, CSS, JavaScript, and more.</p>
-                    </div>
-                    <div class="course-card">
-                        <h3>Machine Learning</h3>
-                        <p>Dive into the world of AI and machine learning with our hands-on courses.</p>
+        <div class="row text-center">
+            <div class="col-md-3">
+                <div class="p-4 bg-orange text-white mb-3">Learn Coding</div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 bg-orange text-white mb-3">Online Community</div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 bg-orange text-white mb-3">Jobs</div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 bg-orange text-white mb-3">Trending News</div>
+            </div>
+        </div>
+        <h2>Courses on Web Development</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="path/to/html-css.jpg" alt="HTML & CSS">
+                    <div class="card-body">
+                        <h5 class="card-title">HTML & CSS</h5>
+                        <p class="card-text">Learn the basics of web structure and styling...</p>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="path/to/json.jpg" alt="JSON">
+                    <div class="card-body">
+                        <h5 class="card-title">JSON</h5>
+                        <p class="card-text">Learn how to use JSON, a lightweight data interchange format...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="path/to/wordpress.jpg" alt="WordPress">
+                    <div class="card-body">
+                        <h5 class="card-title">WordPress</h5>
+                        <p class="card-text">Learn how to use WordPress, the most popular content management system...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="path/to/php.jpg" alt="PHP">
+                    <div class="card-body">
+                        <h5 class="card-title">PHP</h5>
+                        <p class="card-text">Learn PHP, a widely-used open-source scripting language...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>View All Courses</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="path/to/tailwind.jpg" alt="Mastering Tailwind CSS">
+                    <div class="card-body">
+                        <h5 class="card-title">Mastering Tailwind CSS</h5>
+                        <p class="card-text">Beginner's guide</p>
+                        <a href="#" class="btn btn-orange">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="path/to/fullstack.jpg" alt="Full Stack Web Development">
+                    <div class="card-body">
+                        <h5 class="card-title">Full Stack Web Development</h5>
+                        <p class="card-text">Beginner's guide</p>
+                        <a href="#" class="btn btn-orange">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="path/to/machinelearning.jpg" alt="Machine Learning & Data Science">
+                    <div class="card-body">
+                        <h5 class="card-title">Machine Learning & Data Science</h5>
+                        <p class="card-text">Beginner's guide</p>
+                        <a href="#" class="btn btn-orange">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Toggle brightness
+        document.getElementById('brightness-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
-</html> 
+</html>
