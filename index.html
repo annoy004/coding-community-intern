@@ -3,145 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Community</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Dual Navbar Example</title>
     <link rel="stylesheet" href="styles.css">
     
 </head>
 <body>
-    <header class="bg-white shadow-sm">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">Coding Community</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav navbar-nav-left">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">DSA</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Web Development</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">ML & Data Science</a></li>
-                </ul>
-                <ul class="navbar-nav navbar-nav-right">
-                    <li class="nav-item"><a class="nav-link" href="#">Interviews</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
-                    <li class="nav-item">
-                        <button class="btn btn-outline-dark" id="brightness-toggle">Brightness</button>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="btn btn-orange">Sign In</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main class="container mt-5">
-        <div class="text-center">
-            <h1>Welcome to Coding Community</h1>
-            <p>Join our vibrant online community where you learn, share and grow together</p>
-            <div class="input-group mb-3 w-50 mx-auto">
-                <input type="text" class="form-control" placeholder="Learn python, HTML, CSS">
-                <div class="input-group-append">
-                    <button class="btn btn-orange" type="button">Search</button>
-                </div>
+    <nav class="navbar" aria-label="Main navbar">
+        <div class="navbar-left">
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#">DSA</a>
+            <a class="nav-link" href="#">Web Development</a> 
+            <a class="nav-link" href="#">ML & Data Science</a> 
+        </div>
+        <div class="navbar-center">
+            <a class="navbar-brand" href="#">
+                <span class="logo-top">𝐂𝐨𝐝𝐢𝐧𝐠 
+                </span>
+                <span class="logo-bottom">𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐭𝐲</span>
+            </a>
+        </div>
+
+        <div class="navbar-right">
+            
+            <a class="nav-link" href="#">Interviews</a>
+            <a class="nav-link" href="#">Projects</a>
+            <a class="nav-link" href="#">Jobs</a>
+            <span class="nav-link dark-mode-toggle">🔆🌙 </span> 
+            <a class="nav-link sign-in-box" href="#">Sign In</a>
+        </div>
+    </nav>
+
+    <nav class="secondary-navbar" aria-label="second navbar">
+        <div class="secondary-navbar-left">
+            <a class="secondary-nav-link" href="#">Trending</a>
+            <a class="secondary-nav-link" href="#">HTML</a>
+            <a class="secondary-nav-link" href="#">CSS</a>
+            <a class="secondary-nav-link" href="#">Data Structures</a>
+            <a class="secondary-nav-link" href="#">Machine Learning</a>
+            <a class="secondary-nav-link" href="#">Data Science </a>
+            <a class="secondary-nav-link" href="#">Algorithm </a>
+            <a class="secondary-nav-link" href="#">Data Script</a>
+            <a class="secondary-nav-link" href="#">PHP</a>
+            <a class="secondary-nav-link" href="#">SQL</a>
+            <a class="secondary-nav-link" href="#">Kotlin</a>
+            <a class="secondary-nav-link" href="#">CSS Frameworks</a>
+            <a class="secondary-nav-link" href="#">JavaScript</a>
+            <a class="secondary-nav-link" href="#">JSON</a>
+        </div>
+    </nav>
+    <div class="welcome-container">
+        <div class="welcome-content">
+            <h1 class="welcome-heading">Welcome to <span class="community-name">Coding Community</span></h1>
+            <p class="welcome-description">Join our vibrant online community where you learn, share, and grow together</p>
+            <div class="custom-input-group">
+                <input type="text" class="custom-form-control" placeholder="Learn python, HTML, CSS">
+                <button class="custom-btn" type="button">Search</button>
             </div>
         </div>
-        <div class="row text-center">
-            <div class="col-md-3">
-                <div class="p-4 bg-orange text-white mb-3">Learn Coding</div>
+    </div>
+    <div class="info-container">
+        <div class="info-box">
+            <h2>Learn Coding</h2>
+            <p>Learn coding online from anywhere in the world.</p>
+        </div>
+        <div class="info-box">
+            <h2>Online Community</h2>
+            <p>Share and get real time advice from industry profestionals.</p>
+        </div>
+        <div class="info-box">
+            <h2>Jobs</h2>
+            <p>Get access to jobs and projects from around the world.</p>
+        </div>
+        <div class="info-box">
+            <h2>Trending News</h2>
+            <p>Get treding news and information about the tech community.</p>
+        </div>
+    </div>    
+    <div class="courses-container">
+        <h2 class="courses-heading">Courses on Web Development</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="/images/depositphotos_352749710-stock-photo-html-css-logos-programming-languages.jpg" alt="HTML Course">
+                <p><h4>Complete HTML course-Beginners to advanced</h4></p>
+                <a class="explore-link" href="#">Explore &gt;</a>
             </div>
-            <div class="col-md-3">
-                <div class="p-4 bg-orange text-white mb-3">Online Community</div>
+            <div class="card">
+                <img src="/images/phpimage.jfif" alt="PHP Course">
+                <p><h4>Complete HTML course-Beginners to advanced</h4></p>
+                <a class="explore-link" href="#">Explore &gt;</a>
             </div>
-            <div class="col-md-3">
-                <div class="p-4 bg-orange text-white mb-3">Jobs</div>
+            <div class="card">
+                <img src="/images/Nodejs.avif" alt="Node.js Course">
+                <p><h4>Complete HTML course-Beginners to advanced</h4></p>
+                <a class="explore-link" href="#">Explore &gt;</a>
             </div>
-            <div class="col-md-3">
-                <div class="p-4 bg-orange text-white mb-3">Trending News</div>
+            <div class="card">
+                <img src="/images/javascript.jpg" alt="JavaScript Course">
+                <p><h4>Complete HTML course-Beginners to advanced</h4></p>
+                <a class="explore-link" href="#">Explore &gt;</a>
             </div>
         </div>
-        <h2>Courses on Web Development</h2>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card mb-3">
-                    <img class="card-img-top" src="/images/HTML & CSS.jfif" alt="HTML & CSS">
-                    <div class="card-body">
-                        <h5 class="card-title">HTML & CSS</h5>
-                        <p class="card-text">Learn the basics of web structure and styling...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-3">
-                    <img class="card-img-top" src="/images/JSON.jfif" alt="JSON">
-                    <div class="card-body">
-                        <h5 class="card-title">JSON</h5>
-                        <p class="card-text">Learn how to use JSON, a lightweight data interchange format...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-3">
-                    <img class="card-img-top" src="/images/wroldpress.jfif" alt="WordPress">
-                    <div class="card-body">
-                        <h5 class="card-title">WordPress</h5>
-                        <p class="card-text">Learn how to use WordPress, the most popular content management system...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-3">
-                    <img class="card-img-top" src="/images/PHP.jfif" alt="PHP">
-                    <div class="card-body">
-                        <h5 class="card-title">PHP</h5>
-                        <p class="card-text">Learn PHP, a widely-used open-source scripting language...</p>
-                    </div>
-                </div>
-            </div>
+    </div>
+<div class="courses-container">
+    <h2 class="courses-heading">View All Courses</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="/images/ML.jfif" alt="Mastering Tailwind CSS">
+            <h3>Mastering Tailwind CSS</h3>
+            <a href="#" class="explore-link">Explore &gt;</a>
+            
         </div>
-        <h2>View All Courses</h2>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card mb-3">
-                    <img class="card-img-top" src="/images/TailwindCSS.jfif" alt="Mastering Tailwind CSS">
-                    <div class="card-body">
-                        <h5 class="card-title">Mastering Tailwind CSS</h5>
-                        <p class="card-text">Beginner's guide</p>
-                        <a href="#" class="btn btn-orange">Explore</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-3">
-                    <img class="card-img-top" src="/images/fullstack.jfif" alt="Full Stack Web Development">
-                    <div class="card-body">
-                        <h5 class="card-title">Full Stack Web Development</h5>
-                        <p class="card-text">Beginner's guide</p>
-                        <a href="#" class="btn btn-orange">Explore</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-3">
-                    <img class="card-img-top" src="/images/ML.jfif" alt="Machine Learning & Data Science">
-                    <div class="card-body">
-                        <h5 class="card-title">Machine Learning & Data Science</h5>
-                        <p class="card-text">Beginner's guide</p>
-                        <a href="#" class="btn btn-orange">Explore</a>
-                    </div>
-                </div>
-            </div>
+        <div class="card">
+            <img src="/images/HTML & CSS.jfif" alt="Full Stack Web Development">
+            <h3>Full Stack Web Development</h3>
+            <a href="#" class="explore-link">Explore &gt;</a>
+           
         </div>
-    </main>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // Toggle brightness
-        document.getElementById('brightness-toggle').addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
+        <div class="card">
+            <img src="/images/images (7).jfif" alt="Machine Learning & Data Science">
+            <h3>Machine Learning & Data Science</h3>
+            <a href="#" class="explore-link">Explore &gt;</a>
+            
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="styles.css">
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+ 
