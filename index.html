@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dual Navbar Example</title>
-    <link rel="stylesheet" href="styles.css">
-    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <nav class="navbar" aria-label="Main navbar">
         <div class="navbar-left">
             <a class="nav-link" href="#">Home</a>
             <a class="nav-link" href="#">DSA</a>
+            <i class="fas fa-angle-left icon less-than vertical fa-sm" title="Less Than Upward"></i>
             <a class="nav-link" href="#">Web Development</a> 
+            <i class="fas fa-angle-left icon less-than vertical fa-sm" title="Less Than Upward"></i>
             <a class="nav-link" href="#">ML & Data Science</a> 
+            <i class="fas fa-angle-left icon less-than vertical fa-sm" title="Less Than Upward"></i>
         </div>
         <div class="navbar-center">
             <a class="navbar-brand" href="#">
@@ -22,26 +26,30 @@
                 <span class="logo-bottom">𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐭𝐲</span>
             </a>
         </div>
-
+    
         <div class="navbar-right">
-            
             <a class="nav-link" href="#">Interviews</a>
+            <i class="fas fa-angle-left icon less-than vertical fa-sm" title="Less Than Upward"></i>
             <a class="nav-link" href="#">Projects</a>
             <a class="nav-link" href="#">Jobs</a>
-            <span class="nav-link dark-mode-toggle">🔆🌙 </span> 
+            <span class="nav-link dark-mode-toggle">🔆🌙</span> 
             <a class="nav-link sign-in-box" href="#">Sign In</a>
+        </div>
+        <div class="navbar-toggle">
+            <span class="navbar-toggle-icon"><i class="fas fa-bars"></i></span>
         </div>
     </nav>
 
     <nav class="secondary-navbar" aria-label="second navbar">
         <div class="secondary-navbar-left">
+            <i class="fas fa-angle-left icon less-than fa-sm" title="Less Than"></i>
             <a class="secondary-nav-link" href="#">Trending</a>
             <a class="secondary-nav-link" href="#">HTML</a>
             <a class="secondary-nav-link" href="#">CSS</a>
-            <a class="secondary-nav-link" href="#">Data Structures</a>
+            <a class="secondary-nav-link" href="#">Data Structures </a>
             <a class="secondary-nav-link" href="#">Machine Learning</a>
-            <a class="secondary-nav-link" href="#">Data Science </a>
-            <a class="secondary-nav-link" href="#">Algorithm </a>
+            <a class="secondary-nav-link" href="#">Data Science</a>
+            <a class="secondary-nav-link" href="#">Algorithm</a>
             <a class="secondary-nav-link" href="#">Data Script</a>
             <a class="secondary-nav-link" href="#">PHP</a>
             <a class="secondary-nav-link" href="#">SQL</a>
@@ -49,8 +57,10 @@
             <a class="secondary-nav-link" href="#">CSS Frameworks</a>
             <a class="secondary-nav-link" href="#">JavaScript</a>
             <a class="secondary-nav-link" href="#">JSON</a>
+            <i class="fas fa-angle-right icon greater-than fa-sm" title="Greater Than"></i>
         </div>
     </nav>
+
     <div class="welcome-container">
         <div class="welcome-content">
             <h1 class="welcome-heading">Welcome to <span class="community-name">Coding Community</span></h1>
@@ -61,82 +71,106 @@
             </div>
         </div>
     </div>
+
     <div class="info-container">
         <div class="info-box">
+            <i class="fas fa-code icon learn-coding" title="Learn Coding"></i>
             <h2>Learn Coding</h2>
             <p>Learn coding online from anywhere in the world.</p>
         </div>
         <div class="info-box">
+            <i class="fas fa-users icon online-community" title="Online Community"></i>
             <h2>Online Community</h2>
-            <p>Share and get real time advice from industry profestionals.</p>
+            <p>Share and get real time advice from industry professionals.</p>
         </div>
         <div class="info-box">
+            <i class="fas fa-briefcase icon jobs" title="Jobs"></i>
             <h2>Jobs</h2>
             <p>Get access to jobs and projects from around the world.</p>
         </div>
         <div class="info-box">
+            <i class="fas fa-newspaper icon trending-news" title="Trending News"></i>
             <h2>Trending News</h2>
-            <p>Get treding news and information about the tech community.</p>
+            <p>Get trending news and information about the tech community.</p>
         </div>
-    </div>    
+    </div>
+
     <div class="courses-container">
         <h2 class="courses-heading">Courses on Web Development</h2>
         <div class="card-container">
             <div class="card">
-                <img src="/images/depositphotos_352749710-stock-photo-html-css-logos-programming-languages.jpg" alt="HTML Course">
-                <p><h4>Complete HTML course-Beginners to advanced</h4></p>
+                <img src="html.jpeg" alt="HTML Course">
+                <p><h4>Complete HTML course - Beginners to advanced</h4></p>
+                <p class="fourty">40K+ interested</p>
+                <div class="top">
+                <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
                 <a class="explore-link" href="#">Explore &gt;</a>
+            </div>
             </div>
             <div class="card">
-                <img src="/images/phpimage.jfif" alt="PHP Course">
-                <p><h4>Complete HTML course-Beginners to advanced</h4></p>
-                <a class="explore-link" href="#">Explore &gt;</a>
-            </div>
+                <img src="php.jpeg" alt="PHP Course">
+                <p><h4>Complete PHP course - Beginners to advanced</h4></p>
+                <p class="fourty">40K+ interested</p>
+                <div class="top">
+                    <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
+                    <a class="explore-link" href="#">Explore &gt;</a>
+                </div>            </div>
             <div class="card">
-                <img src="/images/Nodejs.avif" alt="Node.js Course">
-                <p><h4>Complete HTML course-Beginners to advanced</h4></p>
-                <a class="explore-link" href="#">Explore &gt;</a>
-            </div>
+                <img src="node.jpeg" alt="Node.js Course">
+                <p><h4>Complete Node.js course - Beginners to advanced</h4></p>
+                <p class="fourty">40K+ interested</p>
+                <div class="top">
+                    <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
+                    <a class="explore-link" href="#">Explore &gt;</a>
+                </div>            </div>
             <div class="card">
-                <img src="/images/javascript.jpg" alt="JavaScript Course">
-                <p><h4>Complete HTML course-Beginners to advanced</h4></p>
-                <a class="explore-link" href="#">Explore &gt;</a>
-            </div>
+                <img src="js.jpeg" alt="JavaScript Course">
+                <p><h4>Complete JavaScript course - Beginners to advanced</h4></p>
+                <p class="fourty">40K+ interested</p>
+                <div class="top">
+                    <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
+                    <a class="explore-link" href="#">Explore &gt;</a>
+                </div>            </div>
         </div>
     </div>
-<div class="courses-container">
-    <h2 class="courses-heading">View All Courses</h2>
-    <div class="card-container">
-        <div class="card">
-            <img src="/images/ML.jfif" alt="Mastering Tailwind CSS">
-            <h3>Mastering Tailwind CSS</h3>
-            <a href="#" class="explore-link">Explore &gt;</a>
-            
-        </div>
-        <div class="card">
-            <img src="/images/HTML & CSS.jfif" alt="Full Stack Web Development">
-            <h3>Full Stack Web Development</h3>
-            <a href="#" class="explore-link">Explore &gt;</a>
-           
-        </div>
-        <div class="card">
-            <img src="/images/images (7).jfif" alt="Machine Learning & Data Science">
-            <h3>Machine Learning & Data Science</h3>
-            <a href="#" class="explore-link">Explore &gt;</a>
-            
+
+    <div class="courses-container bigger">
+        <h2 class="courses-heading large">View All Courses</h2>
+        <div class="card-container big-container">
+            <div class="card big-card">
+                <img src="code1.jpeg" alt="Mastering Tailwind CSS">
+                <h3>Mastering Tailwind CSS</h3>
+                <p class="fourty">Begineer's guide</p>
+                <div class="top">
+                    <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
+                    <a class="explore-link bottom" href="#">Explore &gt;</a>
+                </div>            </div>
+            <div class="card big-card">
+                <img src="code2.jpeg" alt="Full Stack Web Development">
+                <h3>Full Stack Web Development</h3>
+                <p class="fourty">Begineer's guide</p>
+                <div class="top">
+                    <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
+                    <a class="explore-link  bottom" href="#">Explore &gt;</a>
+                </div>            </div>
+            <div class="card big-card">
+                <img src="code3.jpeg" alt="Machine Learning & Data Science">
+                <h3>Machine Learning & Data Science</h3>
+                <p class="fourty">Begineer's guide</p>
+                <div class="top">
+                    <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
+                    <a class="explore-link  bottom" href="#">Explore &gt;</a>
+                </div>            </div>
         </div>
     </div>
-</div>
-<link rel="stylesheet" href="styles.css">
+
+    <script>
+        document.querySelector('.navbar-toggle').addEventListener('click', function() {
+            document.querySelector('.navbar-left').classList.toggle('active');
+            document.querySelector('.navbar-right').classList.toggle('active');
+            document.querySelector('.navbar-toggle-icon').classList.toggle('fa-bars');
+            document.querySelector('.navbar-toggle-icon').classList.toggle('fa-times');
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
- 
