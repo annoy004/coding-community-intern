@@ -66,23 +66,52 @@ body {
 }
 
 /* Secondary Navbar Styles */
-.secondary-navbar {
+..secondary-navbar {
     display: flex;
-    justify-content: flex-start;
-    color: #fff;
-    padding: 10px;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 10px 0;
+}
+
+.secondary-navbar-container {
     overflow-x: auto;
+    white-space: nowrap;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.secondary-navbar-left {
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .secondary-nav-link {
-    color: #000000;
+    display: inline-block;
+    padding: 10px 15px;
+    white-space: nowrap;
     text-decoration: none;
-    padding: 6px 8px;
-    transition: background 0.3s;
+    color: #333;
+    font-weight: bold;
 }
-.secondary-navbar-left .icon{
-    color: rgb(0, 0, 0);
+
+.secondary-nav-link:hover {
+    text-decoration: underline;
 }
+
+.scroll-arrow {
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.left-arrow {
+    margin-right: 10px;
+}
+
+.right-arrow {
+    margin-left: 10px;
+}
+
 
 .welcome-container {
     display: flex;
