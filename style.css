@@ -188,7 +188,7 @@ font-size: 30px;
 }
 
 .card {
-    max-width: 300px;
+    max-width: 280px;
     height:350px;
     margin: 10px;
     border-radius: 8px;
@@ -219,7 +219,7 @@ font-size: 30px;
     font-weight: bold;
     border: 2px solid chocolate;
     padding: 10px;
-    margin-left: 150px;
+    margin-left: 120px;
 }
 
 .explore-link:hover {
@@ -228,29 +228,6 @@ font-size: 30px;
 
 
 
-.bigger {
-    padding: 20px;
-    background-color: #fff;
-}
-
-
-.big-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.big-container .bottom{
-    margin-left: 240px;
-}
-.big-card {
-    max-width: 400px;
-    height:360px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);    
-}
-.big-card h3{
-    margin-left: 10px;
-}
 
 
 @media (max-width: 768px) {
