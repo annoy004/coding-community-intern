@@ -233,7 +233,7 @@ body {
 }
 
 /* Media query for screen sizes below 1253px */
-@media (max-width: 1253px) {
+@media (max-width: 1093px) {
     .courses-container {
         padding: 20px 150px; /* Adjust padding */
     }
