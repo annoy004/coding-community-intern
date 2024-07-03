@@ -169,14 +169,13 @@ body {
   
 }
 
-
 .courses-container {
     padding: 20px;
     background-color: #fff;
 }
 
 .courses-heading {
-font-size: 30px;
+    font-size: 30px;
     margin-bottom: 20px;
     margin-left: 30px;
 }
@@ -188,31 +187,38 @@ font-size: 30px;
 }
 
 .card {
+    flex: 1 1 calc(25% - 20px); /* Flex-grow and flex-shrink to fit cards within the container */
     max-width: 280px;
-    height:350px;
+    height: 350px;
     margin: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
-.card h4, p,a{
+
+.card h4, .card p, .card a {
     margin-left: 10px;
 }
-.card .fourty{
-  font-size: 12px;
-  color:#575757;
+
+.card .fourty {
+    font-size: 12px;
+    color: #575757;
 }
-.card .icon{
+
+.card .icon {
     color: #ffb04a;
-    size:2px;
+    font-size: 12px;
 }
+
 .card img {
     max-width: 100%;
     height: auto;
 }
-.card .top{
+
+.card .top {
     margin-top: 30px;
     margin-left: 5px;
 }
+
 .explore-link {
     color: rgb(255, 111, 0);
     text-decoration: none;
@@ -226,7 +232,47 @@ font-size: 30px;
     text-decoration: underline;
 }
 
+/* Media query for screen sizes below 1253px */
+@media (max-width: 1253px) {
+    .courses-container {
+        padding: 20px 150px; /* Adjust padding */
+    }
 
+    .card {
+        flex: 1 1 calc(60% - 20px); /* Adjust width for 3 cards per row */
+    }
+
+    .explore-link {
+        margin-left: 100px; /* Adjust margin for explore link */
+    }
+}
+
+/* Media query for screen sizes below 1000px */
+@media (max-width: 920px) {
+    .courses-container {
+        padding: 20px; /* Adjust padding */
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Adjust width for 2 cards per row */
+    }
+
+    .explore-link {
+        margin-left: 80px; /* Adjust margin for explore link */
+    }
+}
+
+
+/* Media query for screen sizes below 600px */
+@media (max-width: 600px) {
+    .card {
+        flex: 1 1 100%; /* Adjust width for 1 card per row */
+        /* Ensure card takes full width */
+        margin: 10px 0; /* Adjust margin */
+    }
+
+   
+}
 
 
 
@@ -316,3 +362,9 @@ font-size: 30px;
     }
     
 }
+
+
+
+
+
+
