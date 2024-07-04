@@ -97,7 +97,7 @@ body {
     padding: 10px 15px;
     white-space: nowrap;
     text-decoration: none;
-    color: #333;
+    color: black;
     font-weight: bold;
 }
 
@@ -412,46 +412,69 @@ body {
 
 
 /* Dark Mode Styles */
+.dark-mode body {
+   color:white;
+    background-color: #0000;
+}
+
+.dark-mode .navbar {
+  
+    color: white;
+    
+}
+
 .dark-mode {
-    background-color: #333; /* Dark background color */
+    background-color: black; /* Dark background color */
     color: #fff; /* Light text color */
 }
 
 .dark-mode .navbar {
-    border-color: #555; /* Darker border color for navbar */
+    border-color: white; /* Darker border color for navbar */
 }
-
+.dark-mode .nav-link {
+    color: white;
+}
 .dark-mode .secondary-nav-link {
     color: #fff; /* Light color for secondary nav links */
 }
 
 .dark-mode .scroll-arrow {
-    background-color: #777; /* Darker background for scroll arrows */
+    background-color: black; /* Darker background for scroll arrows */
 }
 
 .dark-mode .custom-btn {
-    background-color: #444; /* Darker background for buttons */
+    background-color: #FF5F00; /* Darker background for buttons */
 }
 
 .dark-mode .info-box {
-    background-color: #444; /* Darker background for info boxes */
+    background-color: #FF9F66; /* Darker background for info boxes */
 }
 
 .dark-mode .explore-link {
-    border-color: #fff; /* Lighter border color for explore link */
-    color: #fff; /* Lighter text color for explore link */
+    border-color: #FF5F00; /* Lighter border color for explore link */
+    color: #FF5F00; /* Lighter text color for explore link */
 }
 
 .dark-mode .navbar-brand {
-    color: #ffb04a; /* Accent color for dark mode navbar brand */
+    color: #FF5F00; /* Accent color for dark mode navbar brand */
 }
 
 .dark-mode .icon{
-    color: #ffb04a;
+    color: white;
 }
 
-
-
+.dark-mode .info-container {
+    background-color: black;
+}
+.dark-mode .welcome-container {
+    background-color: black;
+}
+.dark-mode .courses-container {
+    background-color: black;
+}
+.dark-mode .card {
+    background-color: #333;
+}
 
 
 
