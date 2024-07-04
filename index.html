@@ -23,7 +23,7 @@
             <a class="navbar-brand" href="#">
                 <span class="logo-top">𝐂𝐨𝐝𝐢𝐧𝐠 
                 </span>
-                <span class="logo->𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐭𝐲</span>
+                <span class="logo">𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐭𝐲</span>
             </a>
         </div>
     
@@ -32,7 +32,8 @@
             <i class="fas fa-angle-left icon less-than vertical fa-sm" title="Less Than Upward"></i>
             <a class="nav-link" href="#">Projects</a>
             <a class="nav-link" href="#">Jobs</a>
-            <span class="nav-link dark-mode-toggle">🔆🌙</span> 
+            <span class="nav-link dark-mode-toggle" onclick="toggleDarkMode()">🔆🌙</span>
+
             <a class="nav-link sign-in-box" href="#">Sign In</a>
         </div>
         <div class="navbar-toggle">
@@ -66,6 +67,9 @@
             <i class="fas fa-angle-right icon greater-than fa-sm" title="Greater Than"></i>
         </div>
     </nav>
+    
+    
+    
 
     <div class="welcome-container">
         <div class="welcome-content">
@@ -189,6 +193,27 @@
             document.querySelector('.navbar-toggle-icon').classList.toggle('fa-bars');
             document.querySelector('.navbar-toggle-icon').classList.toggle('fa-times');
         });
-    </script>
+   
+        document.addEventListener('DOMContentLoaded', (event) => {
+            function scrollLeft() {
+                const container = document.querySelector('.secondary-navbar-container');
+                container.scrollBy({ left: -200, behavior: 'smooth' });
+            }
+        
+            function scrollRight() {
+                const container = document.querySelector('.secondary-navbar-container');
+                container.scrollBy({ left: 200, behavior: 'smooth' });
+            }
+        
+            document.querySelector('.left-arrow').addEventListener('click', scrollLeft);
+            document.querySelector('.right-arrow').addEventListener('click', scrollRight);
+        });
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+        }
+        
+        
+        </script>
 </body>
 </html>
