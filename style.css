@@ -1,12 +1,16 @@
-/* General Styles */
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
-/* Main Navbar Styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Main navbar styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -20,6 +24,7 @@ body {
     display: flex;
     align-items: center;
 }
+
 .navbar-left .icon {
     color: #000000;
     rotate: 270deg;
@@ -35,21 +40,8 @@ body {
     padding: 8px 10px;
     transition: background 0.3s;
 }
-.dark-mode-toggle{
-    background-color: #ffebd5;
-    border-radius: 10px;
-    
-}
 
-.navbar-toggle {
-    display: none;
-    cursor: pointer;
-}
 
-.navbar-toggle-icon {
-    font-size: 1.5rem;
-    color: #000000;
-}
 
 /* Logo Styles */
 .navbar-brand {
@@ -65,72 +57,46 @@ body {
     font-weight: bold;
 }
 
-/* Secondary Navbar Styles */
+/* Secondary navbar styles */
 .secondary-navbar {
     display: flex;
     align-items: center;
-    position: relative;
-    width: 100%;
-    overflow: hidden; /* Hide any overflow */
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px;
 }
 
 .secondary-navbar-container {
-    overflow-x: auto;
-    white-space: nowrap;
     display: flex;
-    align-items: center;
-    scroll-behavior: smooth;
-    padding: 0 10px; /* Adjust padding to create space for arrows */
+    overflow-x: auto;
+    scrollbar-width: none; /* Hide scrollbar on Firefox */
+    -ms-overflow-style: none;  /* Hide scrollbar on IE 10+ */
 }
 
 .secondary-navbar-container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Webkit browsers */
-}
-
-.secondary-navbar-left {
-    display: flex;
-    flex-wrap: nowrap;
+    display: none;  /* Hide scrollbar on Chrome, Safari, and Opera */
 }
 
 .secondary-nav-link {
-    display: inline-block;
     padding: 10px 15px;
     white-space: nowrap;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-.secondary-nav-link:hover {
-    text-decoration: underline;
+    margin-right: 10px;
 }
 
 .scroll-arrow {
+background-color: #ff8400;
+width: 20px;
     cursor: pointer;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px; /* Fixed width for arrows */
-    background-color: rgb(48, 47, 47); /* Optional: Add background to arrows */
-    z-index: 1; /* Ensure arrows are above the navbar content */
+    padding: 10px 10px;
 }
 
-.left-arrow {
-    left: 0;
+.scroll-arrow .icon {
+    font-size: 18px;
 }
 
-.right-arrow {
-    right: 0;
-}
-
-
-/* Responsive Styles */
-
-
-
+/* Welcome container styles */
 .welcome-container {
     display: flex;
     justify-content: center;
@@ -180,6 +146,9 @@ body {
 }
 
 
+
+
+/* Info container styles */
 .info-container {
     display: flex;
     justify-content: space-around;
@@ -216,6 +185,8 @@ body {
   
 }
 
+
+/* Courses container styles */
 .courses-container {
     padding: 20px;
     background-color: #fff;
@@ -279,6 +250,8 @@ body {
     text-decoration: underline;
 }
 
+
+
 /* Media query for screen sizes below 1253px */
 @media (max-width: 1093px) {
     .courses-container {
@@ -317,7 +290,6 @@ body {
         /* Ensure card takes full width */
         margin: 10px 0; /* Adjust margin */
     }
-
    
 }
 
@@ -332,11 +304,7 @@ body {
         flex-direction: column;
         align-items: flex-start;
     }
-   
-    .navbar-toggle {
-        display: block;
-    }
-
+  
     .navbar-left, .navbar-right {
         display: none;
         flex-direction: column;
@@ -346,11 +314,6 @@ body {
     .navbar-left.active, .navbar-right.active {
         display: flex;
     }
-
-    .secondary-navbar {
-        flex-direction: column;
-    }
-
     .welcome-heading {
         font-size: 2rem;
     }
@@ -380,7 +343,6 @@ body {
     .navbar-left, .navbar-right, .navbar-center {
         align-items: center;
     }
-
     .custom-input-group {
         width: 100%;
     }
@@ -404,77 +366,244 @@ body {
     .big-container .bottom{
         margin-left: 160px;
     }
-    .navbar-brand{
-        margin-left: 120px;
-    }
-    
 }
-
 
 /* Dark Mode Styles */
 .dark-mode body {
-   color:white;
-    background-color: #0000;
+    color:white;
+     background-color: #0000;
+ }
+ 
+ .dark-mode .navbar {
+   
+     color: white;
+     
+ }
+ 
+ .dark-mode {
+     background-color: black; /* Dark background color */
+     color: #fff; /* Light text color */
+ }
+ 
+ .dark-mode .navbar {
+     border-color: white; /* Darker border color for navbar */
+ }
+ .dark-mode .nav-link {
+     color: white;
+ }
+ .dark-mode .secondary-nav-link {
+     color: #ffffff; /* Light color for secondary nav links */
+ }
+ .dark-mode  .secondary-navbar{
+    background-color: black;
+ }
+ 
+ .dark-mode .scroll-arrow {
+     background-color: black; /* Darker background for scroll arrows */
+ }
+ 
+ .dark-mode .custom-btn {
+     background-color: #FF5F00; /* Darker background for buttons */
+ }
+ 
+ .dark-mode .info-box {
+     background-color: #FF5F00; /* Darker background for info boxes */
+ }
+ 
+ .dark-mode .explore-link {
+     border-color: #FF5F00; /* Lighter border color for explore link */
+     color: #FF5F00; /* Lighter text color for explore link */
+ }
+ 
+ .dark-mode .navbar-brand {
+     color: #FF5F00; /* Accent color for dark mode navbar brand */
+ }
+ 
+ .dark-mode .icon{
+     color: white;
+ }
+ 
+ .dark-mode .info-container {
+     background-color: black;
+ }
+ .dark-mode .welcome-container {
+     background-color: black;
+ }
+ .dark-mode .courses-container {
+     background-color: black;
+ }
+ .dark-mode .card {
+     background-color: #333;
+ }
+
+
+
+ .dark-mode  .fourty {
+    color: #bbbbbb;
 }
 
-.dark-mode .navbar {
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
   
+  .user-box {
+    width: 30px;
+  }
+  
+  .user-id {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  
+  .user-name {
+    font-size: 1em;
+  }
+  
+  .dropdown-arrow {
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    margin-left: 3px;
+  }
+  
+  .user-id:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 200px;
+    background-color: white;
+    z-index: 1000; /* Ensure dropdown appears above other elements */
+  }
+  
+  .user-id:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu ul {
+    list-style-type: none;
+  }
+  
+  .dropdown-menu ul li {
+    display: block;
+    height: 30px;
+    width: 100%;
+    font-size: 1em;
+    line-height: 1.5em;
+    padding: 5px 10px;
+    border-bottom: 1px solid #333;
+  }
+  
+  .dropdown-menu ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-menu ul li:hover {
+    background: #333;
+    color: #fff;
+  }
+  
+  /* Light Mode Styles */
+  body.light-mode .user-id {
+    background: #fff;
+    color: #000;
+  }
+  
+  body.light-mode .dropdown-menu {
+    background: rgba(255, 255, 255, 1); /* Set background to white in light mode */
+  }
+  
+  body.light-mode .dropdown-menu ul li {
+    color: #000;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  body.light-mode .dropdown-menu ul li:hover {
+    background: #ddd;
+    color: #000;
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #121212;
     color: white;
-    
-}
-
-.dark-mode {
-    background-color: black; /* Dark background color */
-    color: #fff; /* Light text color */
-}
-
-.dark-mode .navbar {
-    border-color: white; /* Darker border color for navbar */
-}
-.dark-mode .nav-link {
-    color: white;
-}
-.dark-mode .secondary-nav-link {
-    color: #fff; /* Light color for secondary nav links */
-}
-
-.dark-mode .scroll-arrow {
-    background-color: black; /* Darker background for scroll arrows */
-}
-
-.dark-mode .custom-btn {
-    background-color: #FF5F00; /* Darker background for buttons */
-}
-
-.dark-mode .info-box {
-    background-color: #FF9F66; /* Darker background for info boxes */
-}
-
-.dark-mode .explore-link {
-    border-color: #FF5F00; /* Lighter border color for explore link */
-    color: #FF5F00; /* Lighter text color for explore link */
-}
-
-.dark-mode .navbar-brand {
-    color: #FF5F00; /* Accent color for dark mode navbar brand */
-}
-
-.dark-mode .icon{
-    color: white;
-}
-
-.dark-mode .info-container {
-    background-color: black;
-}
-.dark-mode .welcome-container {
-    background-color: black;
-}
-.dark-mode .courses-container {
-    background-color: black;
-}
-.dark-mode .card {
-    background-color: #333;
-}
-
-
-
+  }
+  
+  body.dark-mode .user-id {
+    background: black;
+    color: #fff;
+  }
+  
+  body.dark-mode .dropdown-menu {
+    background: rgba(33, 33, 33, 1);
+  }
+  
+  body.dark-mode .dropdown-menu ul li {
+    color: #fff;
+    border-bottom: 1px solid #444;
+  }
+  
+  body.dark-mode .dropdown-menu ul li:hover {
+    background: #444;
+    color: #fff;
+  }
+  
+  /* Toggle Button Styles */
+  .dark-mode-toggle {
+    width: 32px; /* Adjust width as needed */
+    height: 20px; /* Adjust height as needed */
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .dark-mode-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+  
+  .dark-mode-toggle .toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 10px; /* Adjust border radius to round corners */
+  }
+  
+  .dark-mode-toggle .toggle-slider:before {
+    content: "";
+    position: absolute;
+    height: 16px; /* Adjust height of the toggle circle */
+    width: 16px; /* Adjust width of the toggle circle */
+    top: 2px; /* Adjust position of the toggle circle */
+    left: 2px; /* Adjust position of the toggle circle */
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  .dark-mode-toggle input:checked + .toggle-slider {
+    background-color: #2196F3;
+  }
+  
+  .dark-mode-toggle input:checked + .toggle-slider:before {
+    transform: translateX(12px); /* Adjust distance of movement */
+  }

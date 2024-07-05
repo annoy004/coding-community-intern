@@ -12,28 +12,85 @@
     <nav class="navbar" aria-label="Main navbar">
         <div class="navbar-left">
             <a class="nav-link" href="#">Home</a>
-            <a class="nav-link" href="#">DSA</a>
-            <i class="fas fa-angle-left icon less-than vertical fa-sm" title="Less Than Upward"></i>
-            <a class="nav-link" href="#">Web Development</a> 
-            <i class="fas fa-angle-left icon less-than vertical fa-sm" title="Less Than Upward"></i>
-            <a class="nav-link" href="#">ML & Data Science</a> 
-            <i class="fas fa-angle-left icon less-than vertical fa-sm" title="Less Than Upward"></i>
+            <a class="nav-link" href="#">
+                <div class="user-id">
+                <div class="user-name">DSA</div>
+                <div class="dropdown-arrow">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                  <ul>
+                    <li>Settings</li>
+                    <li>Sports</li>
+                    <li>Log Out</li>
+                  </ul>
+                </div>
+              </div></a>
+
+              <a class="nav-link" href="#">
+                <div class="user-id">
+                <div class="user-name">Web Development</div>
+                <div class="dropdown-arrow">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                  <ul>
+                    <li>Settings</li>
+                    <li>Sports</li>
+                    <li>Log Out</li>
+                  </ul>
+                </div>
+              </div></a>
+
+              <a class="nav-link" href="#">
+                <div class="user-id">
+                <div class="user-name">ML & Data Science</div>
+                <div class="dropdown-arrow">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                  <ul>
+                    <li>Settings</li>
+                    <li>Sports</li>
+                    <li>Log Out</li>
+                  </ul>
+                </div>
+              </div></a>
+          
+           
+         
+            <a class="nav-link" href="#"></a> 
+           
         </div>
         <div class="navbar-center">
             <a class="navbar-brand" href="#">
-                <span class="logo-top">𝐂𝐨𝐝𝐢𝐧𝐠 
+               
                 </span>
-                <span class="logo">𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐭𝐲</span>
+                <span class="logo">𝐂𝐨𝐝𝐢𝐧𝐠 𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐭𝐲</span>
             </a>
         </div>
     
         <div class="navbar-right">
-            <a class="nav-link" href="#">Interviews</a>
-            <i class="fas fa-angle-left icon less-than vertical fa-sm" title="Less Than Upward"></i>
+            <a class="nav-link" href="#">
+                <div class="user-id">
+                <div class="user-name">Interviews</div>
+                <div class="dropdown-arrow">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                  <ul>
+                    <li>Settings</li>
+                    <li>Sports</li>
+                    <li>Log Out</li>
+                  </ul>
+                </div>
+              </div></a>
             <a class="nav-link" href="#">Projects</a>
             <a class="nav-link" href="#">Jobs</a>
-            <span class="nav-link dark-mode-toggle" onclick="toggleDarkMode()">🔆🌙</span>
-
+            <label class="dark-mode-toggle">
+                <input type="checkbox" onclick="toggleDarkMode()">
+                <span class="toggle-slider round"></span>
+              </label>
             <a class="nav-link sign-in-box" href="#">Sign In</a>
         </div>
         <div class="navbar-toggle">
@@ -42,7 +99,7 @@
     </nav>
 
     <nav class="secondary-navbar" aria-label="second navbar">
-        <div class="scroll-arrow left-arrow" onclick="scrollLeft()">
+        <div class="scroll-arrow left-arrow">
             <i class="fas fa-angle-left icon less-than fa-sm" title="Less Than"></i>
         </div>
         <div class="secondary-navbar-container">
@@ -63,12 +120,10 @@
                 <a class="secondary-nav-link" href="#">JSON</a>
             </div>
         </div>
-        <div class="scroll-arrow right-arrow" onclick="scrollRight()">
+        <div class="scroll-arrow right-arrow">
             <i class="fas fa-angle-right icon greater-than fa-sm" title="Greater Than"></i>
         </div>
     </nav>
-    
-    
     
 
     <div class="welcome-container">
@@ -193,26 +248,31 @@
             document.querySelector('.navbar-toggle-icon').classList.toggle('fa-bars');
             document.querySelector('.navbar-toggle-icon').classList.toggle('fa-times');
         });
-   
         document.addEventListener('DOMContentLoaded', (event) => {
-            function scrollLeft() {
-                const container = document.querySelector('.secondary-navbar-container');
+            const container = document.querySelector('.secondary-navbar-container');
+
+            const scrollLeft = () => {
                 container.scrollBy({ left: -200, behavior: 'smooth' });
             }
-        
-            function scrollRight() {
-                const container = document.querySelector('.secondary-navbar-container');
+
+            const scrollRight = () => {
                 container.scrollBy({ left: 200, behavior: 'smooth' });
             }
-        
+
             document.querySelector('.left-arrow').addEventListener('click', scrollLeft);
             document.querySelector('.right-arrow').addEventListener('click', scrollRight);
+
+            // Debug: log current scroll position and container width
+            container.addEventListener('scroll', () => {
+                console.log('Current scrollLeft:', container.scrollLeft);
+                console.log('Container width:', container.scrollWidth, 'Visible width:', container.clientWidth);
+            });
         });
+
         function toggleDarkMode() {
             const body = document.body;
             body.classList.toggle('dark-mode');
         }
-        
         
         </script>
 </body>
