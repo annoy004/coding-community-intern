@@ -409,21 +409,7 @@ width: 20px;
     .navbar-left.active, .navbar-right.active {
         display: flex;
     }
-    .welcome-heading {
-        font-size: 2rem;
-    }
-
-    .welcome-description {
-        font-size: 1rem;
-    }
-
-    .custom-input-group {
-        flex-direction: column;
-    }
-
-    .custom-form-control {
-        margin-bottom: 10px;
-    }
+   
 
     .info-box {
         flex: 1 1 calc(50% - 40px);
@@ -437,6 +423,48 @@ width: 20px;
 
     .navbar-left, .navbar-right, .navbar-center {
         align-items: center;
+    }
+    .upar {
+        font-size: 2rem;
+        margin-bottom: 80px;
+    }
+
+    .welcome-description {
+        font-size: 1rem;
+    }
+
+    .welcome-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-input-group {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .custom-form-control,
+    .custom-btn {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .custom-btn {
+        margin-bottom: 20px;
+    }
+
+
+    .custom-input-group {
+        flex-direction: column;
+        margin-bottom: 20px;
+
+    }
+
+    .custom-form-control {
+        margin-bottom: 30px;
     }
     .custom-input-group {
         width: 100%;
