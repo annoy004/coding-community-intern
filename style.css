@@ -140,6 +140,7 @@ color: #f4f4f4;
     color: rgb(255, 111, 0);
     text-decoration: none;
     font-size: 1.3rem;
+    margin:0px 0px 0px 10px;
 }
 
 .logo-top, .logo-bottom {
