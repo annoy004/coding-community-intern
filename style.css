@@ -40,8 +40,97 @@ a {
     padding: 8px 10px;
     transition: background 0.3s;
 }
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+}
+.navbar-toggle-icon {
+    font-size: 1.5rem;
+    color: #000000;
+}
+/* darkmode toggle in navbar */
 
+.dark-mode-toggle {
+    background-color: #ffe9d2;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
 
+.dark-mode-toggle .sun, .dark-mode-toggle .moon {
+    border-radius: 20px;
+    padding: 5px;
+}
+
+/* signin button in navbar */
+ .sign-in-box{
+background-color: rgb(255, 111, 0);
+/* padding:10px; */
+border-radius: 6px;
+color: #f4f4f4;
+}
+/* dropdown in navbar */
+.user-id {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  
+  .user-name {
+    font-size: 1em;
+  }
+  
+  .dropdown-arrow {
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    margin-left: 3px;
+  }
+  
+  .user-id:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 160px;
+    background-color: white;
+    z-index: 1000; /* Ensure dropdown appears above other elements */
+  }
+  
+  .user-id:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu ul {
+    list-style-type: none;
+  }
+  
+  .dropdown-menu ul li {
+    display: block;
+    height: 30px;
+    width: 60px;
+    font-size: 1em;
+    line-height: 1.5em;
+    padding: 5px 10px;
+    /* border-bottom: 1px solid #333; */
+  }
+  
+  .dropdown-menu ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-menu ul li:hover {
+    background: #8a8a8a;
+    color: #fff;
+  }
 
 /* Logo Styles */
 .navbar-brand {
@@ -86,7 +175,7 @@ a {
 }
 
 .scroll-arrow {
-background-color: #ff8400;
+background-color: #ffffff;
 width: 20px;
     cursor: pointer;
     padding: 10px 10px;
@@ -94,6 +183,7 @@ width: 20px;
 
 .scroll-arrow .icon {
     font-size: 18px;
+    color: black;
 }
 
 /* Welcome container styles */
@@ -237,7 +327,7 @@ width: 20px;
     margin-left: 5px;
 }
 
-.explore-link {
+.top .explore-link {
     color: rgb(255, 111, 0);
     text-decoration: none;
     font-weight: bold;
@@ -304,7 +394,11 @@ width: 20px;
         flex-direction: column;
         align-items: flex-start;
     }
-  
+   
+    .navbar-toggle {
+        display: block;
+    }
+
     .navbar-left, .navbar-right {
         display: none;
         flex-direction: column;
@@ -436,89 +530,14 @@ width: 20px;
      background-color: #333;
  }
 
-
-
  .dark-mode  .fourty {
     color: #bbbbbb;
 }
 
+/* dropdown */
 
-* {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  
-  .user-box {
-    width: 30px;
-  }
-  
-  .user-id {
-    height: 50px;
-    width: 100%;
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
-  }
-  
-  .user-name {
-    font-size: 1em;
-  }
-  
-  .dropdown-arrow {
-    font-size: 0.8rem;
-    transition: all 0.3s ease;
-    margin-left: 3px;
-  }
-  
-  .user-id:hover .dropdown-arrow {
-    transform: rotate(180deg);
-  }
-  
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 200px;
-    background-color: white;
-    z-index: 1000; /* Ensure dropdown appears above other elements */
-  }
-  
-  .user-id:hover .dropdown-menu {
-    display: block;
-  }
-  
-  .dropdown-menu ul {
-    list-style-type: none;
-  }
-  
-  .dropdown-menu ul li {
-    display: block;
-    height: 30px;
-    width: 100%;
-    font-size: 1em;
-    line-height: 1.5em;
-    padding: 5px 10px;
-    border-bottom: 1px solid #333;
-  }
-  
-  .dropdown-menu ul li:last-child {
-    border-bottom: none;
-  }
-  
-  .dropdown-menu ul li:hover {
-    background: #333;
-    color: #fff;
-  }
-  
-  /* Light Mode Styles */
-  body.light-mode .user-id {
+/* Light Mode Styles */
+body.light-mode .user-id {
     background: #fff;
     color: #000;
   }
@@ -554,56 +573,19 @@ width: 20px;
   
   body.dark-mode .dropdown-menu ul li {
     color: #fff;
-    border-bottom: 1px solid #444;
+    /* border-bottom: 1px solid #363636; */
   }
   
   body.dark-mode .dropdown-menu ul li:hover {
     background: #444;
     color: #fff;
   }
+
+
   
-  /* Toggle Button Styles */
-  .dark-mode-toggle {
-    width: 32px; /* Adjust width as needed */
-    height: 20px; /* Adjust height as needed */
-    position: relative;
-    cursor: pointer;
-  }
+@media (max-width: 768px) {
+    .nav-box{
+        margin: 10px 10px 30px;
+       }
+}
   
-  .dark-mode-toggle input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-    position: absolute;
-  }
-  
-  .dark-mode-toggle .toggle-slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 10px; /* Adjust border radius to round corners */
-  }
-  
-  .dark-mode-toggle .toggle-slider:before {
-    content: "";
-    position: absolute;
-    height: 16px; /* Adjust height of the toggle circle */
-    width: 16px; /* Adjust width of the toggle circle */
-    top: 2px; /* Adjust position of the toggle circle */
-    left: 2px; /* Adjust position of the toggle circle */
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-  }
-  
-  .dark-mode-toggle input:checked + .toggle-slider {
-    background-color: #2196F3;
-  }
-  
-  .dark-mode-toggle input:checked + .toggle-slider:before {
-    transform: translateX(12px); /* Adjust distance of movement */
-  }

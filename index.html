@@ -6,12 +6,14 @@
     <title>Dual Navbar Example</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 </head>
 <body>
     <nav class="navbar" aria-label="Main navbar">
         <div class="navbar-left">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#">
+                <div class="user-id">
+                <div class="user-name">Home</div>
+              </div></a>
             <a class="nav-link" href="#">
                 <div class="user-id">
                 <div class="user-name">DSA</div>
@@ -41,8 +43,7 @@
                   </ul>
                 </div>
               </div></a>
-
-              <a class="nav-link" href="#">
+            <a class="nav-link" href="#">
                 <div class="user-id">
                 <div class="user-name">ML & Data Science</div>
                 <div class="dropdown-arrow">
@@ -55,21 +56,14 @@
                     <li>Log Out</li>
                   </ul>
                 </div>
-              </div></a>
-          
-           
-         
-            <a class="nav-link" href="#"></a> 
-           
+              </div></a>           
         </div>
         <div class="navbar-center">
             <a class="navbar-brand" href="#">
-               
-                </span>
-                <span class="logo">𝐂𝐨𝐝𝐢𝐧𝐠 𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐭𝐲</span>
+                <span class="logo-top">𝐂𝐨𝐝𝐢𝐧𝐠</span>
+                <span class="logo">𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐭𝐲</span>
             </a>
         </div>
-    
         <div class="navbar-right">
             <a class="nav-link" href="#">
                 <div class="user-id">
@@ -84,20 +78,24 @@
                     <li>Log Out</li>
                   </ul>
                 </div>
+              </div></a>            
+              <a class="nav-link" href="#">
+                <div class="user-id">
+                <div class="user-name">Home</div>
               </div></a>
-            <a class="nav-link" href="#">Projects</a>
-            <a class="nav-link" href="#">Jobs</a>
-            <label class="dark-mode-toggle">
-                <input type="checkbox" onclick="toggleDarkMode()">
-                <span class="toggle-slider round"></span>
-              </label>
-            <a class="nav-link sign-in-box" href="#">Sign In</a>
+              <a class="nav-link" href="#">
+                <div class="user-id">
+                <div class="user-name">Home</div>
+              </div></a>
+            <div class="nav-link nav-box dark-mode-toggle" onclick="toggleDarkMode()">
+                <span class="sun">🔆</span>
+                <span class="moon">🌙</span></div>
+            <a class="nav-link nav-box sign-in-box" href="#">Sign In</a>
         </div>
         <div class="navbar-toggle">
             <span class="navbar-toggle-icon"><i class="fas fa-bars"></i></span>
         </div>
     </nav>
-
     <nav class="secondary-navbar" aria-label="second navbar">
         <div class="scroll-arrow left-arrow">
             <i class="fas fa-angle-left icon less-than fa-sm" title="Less Than"></i>
@@ -124,7 +122,6 @@
             <i class="fas fa-angle-right icon greater-than fa-sm" title="Greater Than"></i>
         </div>
     </nav>
-    
 
     <div class="welcome-container">
         <div class="welcome-content">
@@ -165,37 +162,40 @@
         <div class="card-container">
             <div class="card">
                 <img src="html.jpeg" alt="HTML Course">
-                <p><h4>Complete HTML course - Beginners to advanced</h4></p>
+                <h4>Complete HTML course - Beginners to advanced</h4>
                 <p class="fourty">40K+ interested</p>
                 <div class="top">
-                <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
-                <a class="explore-link" href="#">Explore &gt;</a>
-            </div>
+                    <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
+                    <a class="explore-link" href="#">Explore &gt;</a>
+                </div>
             </div>
             <div class="card">
                 <img src="php.jpeg" alt="PHP Course">
-                <p><h4>Complete PHP course - Beginners to advanced</h4></p>
+                <h4>Complete PHP course - Beginners to advanced</h4>
                 <p class="fourty">40K+ interested</p>
                 <div class="top">
                     <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
                     <a class="explore-link" href="#">Explore &gt;</a>
-                </div>            </div>
+                </div>
+            </div>
             <div class="card">
                 <img src="node.jpeg" alt="Node.js Course">
-                <p><h4>Complete Node.js course - Beginners to advanced</h4></p>
+                <h4>Complete Node.js course - Beginners to advanced</h4>
                 <p class="fourty">40K+ interested</p>
                 <div class="top">
                     <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
                     <a class="explore-link" href="#">Explore &gt;</a>
-                </div>            </div>
+                </div>
+            </div>
             <div class="card">
                 <img src="js.jpeg" alt="JavaScript Course">
-                <p><h4>Complete JavaScript course - Beginners to advanced</h4></p>
+                <h4>Complete JavaScript course - Beginners to advanced</h4>
                 <p class="fourty">40K+ interested</p>
                 <div class="top">
                     <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
                     <a class="explore-link" href="#">Explore &gt;</a>
-                </div>            </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -204,50 +204,54 @@
         <div class="card-container big-container">
             <div class="card big-card">
                 <img src="code1.jpeg" alt="Mastering Tailwind CSS">
-                <p><h4>Mastering Tailwind CSS</h4></p>
-                
-                <p class="fourty">Begineer's guide</p>
+                <h4>Mastering Tailwind CSS</h4>
+                <p class="fourty">Beginner's guide</p>
                 <div class="top">
                     <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
-                    <a class="explore-link  href="#">Explore &gt;</a>
-                </div>            </div>
+                    <a class="explore-link" href="#">Explore &gt;</a>
+                </div>
+            </div>
             <div class="card big-card">
                 <img src="code2.jpeg" alt="Full Stack Web Development">
-                <p><h4>Full Stack Web Development</h4></p>
-                <p class="fourty">Begineer's guide</p>
+                <h4>Full Stack Web Development</h4>
+                <p class="fourty">Beginner's guide</p>
                 <div class="top">
                     <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
-                    <a class="explore-link   href="#">Explore &gt;</a>
-                </div>            </div>
+                    <a class="explore-link" href="#">Explore &gt;</a>
+                </div>
+            </div>
             <div class="card big-card">
                 <img src="code3.jpeg" alt="Machine Learning & Data Science">
-                <p><h4>Machine Learning & Data Science</h4></p>
-                <p class="fourty">Begineer's guide</p>
+                <h4>Machine Learning & Data Science</h4>
+                <p class="fourty">Beginner's guide</p>
                 <div class="top">
                     <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
-                    <a class="explore-link   href="#">Explore &gt;</a>
-                </div>            </div>
-                <div class="card big-card">
-                    <img src="code3.jpeg" alt="Machine Learning & Data Science">
-                    <p><h4>Machine Learning & Data Science</h4></p>
-                    
-                    <p class="fourty">Begineer's guide</p>
-                    <div class="top">
-                        <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
-                        <a class="explore-link   href="#">Explore &gt;</a>
-                    </div>            </div>
+                    <a class="explore-link" href="#">Explore &gt;</a>
+                </div>
+            </div>
+            <div class="card big-card">
+                <img src="code3.jpeg" alt="Machine Learning & Data Science">
+                <h4>Machine Learning & Data Science</h4>
+                <p class="fourty">Beginner's guide</p>
+                <div class="top">
+                    <i class="fas fa-star icon star fa-sm" title="Star">4.5</i>
+                    <a class="explore-link" href="#">Explore &gt;</a>
+                </div>
             </div>
         </div>
-   
     </div>
 
     <script>
-        document.querySelector('.navbar-toggle').addEventListener('click', function() {
+
+    //hamburger icon
+    document.querySelector('.navbar-toggle').addEventListener('click', function() {
             document.querySelector('.navbar-left').classList.toggle('active');
             document.querySelector('.navbar-right').classList.toggle('active');
             document.querySelector('.navbar-toggle-icon').classList.toggle('fa-bars');
             document.querySelector('.navbar-toggle-icon').classList.toggle('fa-times');
         });
+   //secondary navbar
+
         document.addEventListener('DOMContentLoaded', (event) => {
             const container = document.querySelector('.secondary-navbar-container');
 
@@ -269,11 +273,38 @@
             });
         });
 
-        function toggleDarkMode() {
-            const body = document.body;
-            body.classList.toggle('dark-mode');
-        }
-        
-        </script>
+    //darkmode function
+    function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+
+    const sun = document.querySelector('.sun');
+    const moon = document.querySelector('.moon');
+    
+    if (body.classList.contains('dark-mode')) {
+        sun.style.backgroundColor = '';
+        moon.style.backgroundColor = '#FF5F00';
+    } else {
+        sun.style.backgroundColor = '#FF5F00';
+        moon.style.backgroundColor = '';
+    }
+}
+
+// Initial state setting based on the current mode
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+    const sun = document.querySelector('.sun');
+    const moon = document.querySelector('.moon');
+    
+    if (body.classList.contains('dark-mode')) {
+        sun.style.backgroundColor = '';
+        moon.style.backgroundColor = '#FF5F00';
+    } else {
+        sun.style.backgroundColor = '#FF5F00';
+        moon.style.backgroundColor = '';
+    }
+});
+
+    </script>
 </body>
 </html>
